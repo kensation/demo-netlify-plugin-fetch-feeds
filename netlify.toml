@@ -12,6 +12,10 @@
 
     # All the feeds we wish to gather for use in the build
     [[plugins.inputs.feeds]]
+      name = "nasa"
+      url = "https://www.nasa.gov/rss/dyn/breaking_news.rss"
+      ttl = 3600
+    [[plugins.inputs.feeds]]
       name = "hawksworx"
       url = "https://hawksworx.com/feed.json"
       ttl = 120   # Cache for 2 minutes
