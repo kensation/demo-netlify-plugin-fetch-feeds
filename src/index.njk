@@ -24,14 +24,14 @@ This site demonstrates <a href="https://github.com/philhawksworth/netlify-plugin
 <h2>Nasa blog</h2>
 <ul class="listing">
 {%- for item in nasa.rss.channel.item.slice(0,4) -%}
-  <li><a href="{{ item.link }}{{ site.utm }}">{{ item.title }}</a></li>
+  <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {%- endfor -%}
 </ul>
 
 <h2>Netlify blog</h2>
 <ul class="listing">
 {%- for item in netlify.rss.channel.item.slice(0,4) -%}
-  <li><a href="{{ item.link }}{{ site.utm }}">{{ item.title }}</a></li>
+  <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {%- endfor -%}
 </ul>
 
