@@ -14,7 +14,7 @@
     [[plugins.inputs.feeds]]
       name = "nasa"
       url = "https://www.nasa.gov/rss/dyn/breaking_news.rss"
-      ttl = 3600
+        ttl = 120
     [[plugins.inputs.feeds]]
       name = "hawksworx"
       url = "https://hawksworx.com/feed.json"
