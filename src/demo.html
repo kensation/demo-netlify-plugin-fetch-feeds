@@ -7,13 +7,15 @@
   <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
-    <div x-data="{ open: false }">
-        <button @click="open = true">Expand</button>
-        <span x-show="open">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id faucibus elit. Cras elit arcu, lacinia eget congue quis, venenatis lobortis est. Pellentesque a est massa. Aliquam est elit, porttitor id tortor id, imperdiet consectetur turpis. Praesent ultricies quam augue, vitae suscipit mi molestie in. Sed ut erat vitae nulla aliquet tristique. Quisque iaculis bibendum semper. Duis mollis turpis sapien. Nulla nunc tortor, tristique vitae leo vel, egestas tempor elit. Aliquam sed posuere urna. Quisque consectetur risus ut massa ornare, id mattis nisl pulvinar. Duis vitae erat sem. Integer iaculis, ex non condimentum tempus, dui dui elementum purus, sed lobortis arcu dolor quis nibh.
-
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id faucibus elit. Cras elit arcu, lacinia eget congue quis, venenatis lobortis est. Pellentesque a est massa. Aliquam est elit, porttitor id tortor id, imperdiet consectetur turpis. Praesent ultricies quam augue, vitae suscipit mi molestie in. Sed ut erat vitae nulla aliquet tristique. Quisque iaculis bibendum semper. Duis mollis turpis sapien. Nulla nunc tortor, tristique vitae leo vel, egestas tempor elit. Aliquam sed posuere urna. Quisque consectetur risus ut massa ornare, id mattis nisl pulvinar. Duis vitae erat sem. Integer iaculis, ex non condimentum tempus, dui dui elementum purus, sed lobortis arcu dolor quis nibh.
-        </span>
-    </div>
+    <template x-for="nasa.rss.channel.item" :key="item">
+        <!-- <div class="flex items-center shadow hover:bg-indigo-100 hover:shadow-lg hover:rounded transition duration-150 ease-in-out transform hover:scale-105 p-3">
+          <img class="w-10 h-10 rounded-full mr-4" :src="`${item.profile_image}`"/>
+          <div class="text-sm">
+            <p class="text-gray-900 leading-none" x-text="item.employee_name + ' (' + item.employee_age + ')'"></p>
+            <p class="text-gray-600" x-text="'$'+item.employee_salary/100"></p>
+          </div>
+        </div> -->
+        <p x-text="item"></p>
+      </template>
 </body>
 </html>
